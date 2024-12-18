@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGNET Offers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.cgnet.com.np/frontend/img/logo/logo.png" alt="CGNET Logo">
+        </div>
+    </header>
+    <div class="container">
+        <h1>CGNET Internet Plans & Offers</h1>
+        <p>Enter details to check your offers.</p>
+        <input type="text" id="searchInput" class="input" placeholder="Enter Account ID, User ID or Phone Number">
+        <button class="btn" onclick="checkOffers()">Check Offers</button>
+    </div>
+
+    <section class="offer-section">
+        <div id="discount-container" class="offer-box" style="display: none;">
+            <h2>Discount Offers</h2>
+            <div id="discount-offers"></div>
+        </div>
+        <div id="bonus-container" class="offer-box" style="display: none;">
+            <h2>Bonus Offers</h2>
+            <div id="bonus-offers"></div>
+        </div>
+    </section>    
+
+    <script src="{{ url_for('static', filename='front.js') }}"></script>
+</body>
+</html>
