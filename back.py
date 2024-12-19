@@ -8,7 +8,7 @@ CORS(app)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://cg_users_user:u6ibdI0OWrF8VIo30He8cxOiXh2GnSci@dpg-ctho7sjqf0us73dm6jug-a/cg_users'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost/cgusers'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
