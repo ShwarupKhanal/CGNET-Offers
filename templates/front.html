@@ -7,13 +7,26 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="https://www.cgnet.com.np/frontend/img/logo/logo.png" alt="CGNET Logo">
-        </div>
-    </header>
+
+  <div class="header">
+    <a href="https://www.cgnet.com.np" class="logo">
+      <img src="{{ url_for('static', filename='img/logo.png') }}" alt="CGNET Logo" style="height: 30px;">
+    </a>
+    <div class="header-right">
+      <a class="active" href="https://www.cgnet.com.np">Home</a>
+      <a class="active" href="https://www.cgnet.com.np/contact-us">Contact</a>
+    </div>
+  </div>
+  
+
+    </div>
+    <section class="Summary">
+      <h1>Welcome to CGNET!</h1>
+      <p>CGNET | CG Communications Limited is Nepal’s leading Internet Service Provider, dedicated to enhancing digital lives through high-speed internet solutions. Our mission is to empower you with reliable internet connectivity and exceptional customer service, whether you're working, learning, or enjoying entertainment. Explore our latest offers and find the perfect plan for your needs!</p>
+    </section>    
+
     <div class="container">
-        <h1>CGNET Internet Plans & Offers</h1>
+        <h1>Internet Plans & Offers</h1>
         <p>Enter details to check your offers.</p>
         <input type="text" id="searchInput" class="input" placeholder="Enter Account ID, User ID or Phone Number">
         <button class="btn" onclick="checkOffers()">Check Offers</button>
@@ -29,7 +42,74 @@
             <div id="bonus-offers"></div>
         </div>
     </section>    
-
+    <div class="cta">
+      <a class="btn1" href="https://cgnet.com.np/residential/products/introductory-offers" target="_blank" style="display:none;">Order Now</a>
+  </div>
+  
     <script src="{{ url_for('static', filename='front.js') }}"></script>
-</body>
-</html>
+
+    <section class="payment-process">
+        <div class="steps">
+          <h1>Payment Process from eSewa</h1>
+          <ol>
+            <h4>Step 1: Open the eSewa App</h4>
+            <h4>Step 2: Login using your User ID and Password</h4>
+            <h4>Step 3: Choose CGNET from Internet payment</h4>
+            <h4>Step 4: Enter your user details</h4>
+            <h4>Step 5: Choose the preferred package</h4>
+            <h4>Step 6: Click "Confirm" to confirm the payment</h4>
+            <h4>Step 7: Payment Successful alert is received.</h4>
+          </ol>
+        </div>
+      
+        <section class="esewa-app">
+          <video class="video" controls autoplay loop muted title="CGNET bill payment via Esewa" style="height: 10cm; width: 16cm;">
+            <source src="https://www.cgnet.com.np/frontend/img/expire/paymentViaEsewa.mp4">
+          </video>
+          <p>Download from:</p>
+          <div class="app">
+            <a href="https://apps.apple.com/in/app/cg-net/id1596428635">
+              <img src="https://cgnet.com.np/frontend/img/appstore.png" alt="App Store" style="background-color: black;"> </a>
+            <a href="https://play.google.com/store/apps/details?id=np.com.cgnet.customerapp">
+              <img src="https://cgnet.com.np/frontend/img/googleplay.png" alt="Google Play" style="background-color: black;"> </a>
+          </div>
+        </section>
+      </section>
+
+      <section class="manual-payment">
+        <h2>For manual payment, please transfer the package amount to the given QR code</h2>
+        <img src="{{ url_for('static', filename='img/qr.png') }}" alt="QR Code" style="height: 5cm; width: 5cm;">
+
+        <p>Please share a screenshot to our WhatsApp number:</p>
+        <a href="https://wa.me/9779801300908?text=Hello"><strong>+977-9801300908</strong></a>
+      </section>
+
+      <footer>
+        <div class="footer">
+          <div class="footer-row">
+            <div class="footer-left">
+              <p>For more details, please call us on: 
+                <a href="tel:+977015970113">01-5970113</a> / 
+                <a href="tel:+977015970114">01-5970114</a> 
+                or chat with us on our WhatsApp number: <a href="https://wa.me/9779801300908?text=Hello">9801300908</a>
+              </p>
+              <p>Alternatively, you can also reach us via email at: 
+                <a href="mailto:customercare@cgnet.com.np">customercare@cgnet.com.np</a>
+              </p>
+            </div>
+            
+            <div class="footer-right">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+              <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+              <div class="social-links">
+                <a href="https://www.facebook.com/cgnet.com.np"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/cgnet.com.np/?igsh=eTJqbTVxcWN2cGZi&fbclid=IwY2xjawHWYwpleHRuA2FlbQIxMAABHU28Vvn1aZ1x66nFsvj1nWF8WX8psAU8Iaw0ZxJW-JlYnOEmhonB9wwO_A_aem_TNv0NoVtUctNemFMfrC2gw"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@cgnet898"><i class="fa fa-youtube"></i></a>
+              </div class="Copyright">
+              <p>Copyright 2025, CGNET | CG Communications Limited. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
