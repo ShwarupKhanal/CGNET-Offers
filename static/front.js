@@ -4,11 +4,9 @@ function checkOffers() {
     const bonusContainer = document.getElementById("bonus-container");
     const discountOffers = document.getElementById("discount-offers");
     const bonusOffers = document.getElementById("bonus-offers");
-    const orderNowButton = document.querySelector(".btn1");
 
     discountContainer.style.display = "none";
     bonusContainer.style.display = "none";
-    orderNowButton.style.display = "none"; 
 
     discountOffers.innerHTML = "";
     bonusOffers.innerHTML = "";
@@ -54,7 +52,7 @@ function checkOffers() {
                 }
 
                 if (hasOffers) {
-                    orderNowButton.style.display = "inline-block";
+                   
                 } else {
                     alert("No offers available for the given details.");
                 }
