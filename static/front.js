@@ -29,31 +29,21 @@ function checkOffers() {
             if (data.error) {
                 alert(data.error);
             } else {
-                let hasOffers = false;
-
-                if (data.discountOffers && data.discountOffers.length > 0) {
+                if (data.offer1 && data.offer1.length > 0) {
                     discountContainer.style.display = "block";
-                    data.discountOffers.forEach(offer => {
-                        const offerElement = document.createElement("p");
-                        offerElement.textContent = offer;
-                        discountOffers.appendChild(offerElement);
-                    });
-                    hasOffers = true;
+                    const offerElement = document.createElement("p");
+                    offerElement.textContent = data.offer1;
+                    discountOffers.appendChild(offerElement);
                 }
 
-                if (data.bonusOffers && data.bonusOffers.length > 0) {
+                if (data.offer2 && data.offer2.length > 0) {
                     bonusContainer.style.display = "block";
-                    data.bonusOffers.forEach(offer => {
-                        const offerElement = document.createElement("p");
-                        offerElement.textContent = offer;
-                        bonusOffers.appendChild(offerElement);
-                    });
-                    hasOffers = true;
+                    const offerElement = document.createElement("p");
+                    offerElement.textContent = data.offer2;
+                    bonusOffers.appendChild(offerElement);
                 }
 
-                if (hasOffers) {
-                   
-                } else {
+                if (!data.offer1 && !data.offer2) {
                     alert("No offers available for the given details.");
                 }
             }

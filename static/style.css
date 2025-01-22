@@ -100,25 +100,49 @@ header {
 }
 
 .offer-box {
-    flex: 1;
-    margin: 10px;
-    background: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  flex: 1;
+  margin: 10px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .offer-box h2 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #007bff;
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #007bff;
+  font-weight: 600;
 }
 
-.offer-box div {
-    margin-top: 10px;
-    text-align: left;
+.offer-box p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  text-align: center; 
 }
+
+#packages-container {
+  background: #fff;
+  border: 1px solid #ddd; 
+}
+
+#packages-container h2 {
+  color: #007bff;
+}
+
 
 .payment-process {
     margin: 20px auto;
