@@ -61,14 +61,15 @@
       
         <section class="esewa-app">
           <video class="video" controls autoplay loop muted title="CGNET bill payment via Esewa" style="height: 10cm; width: 16cm;">
-            <source src="https://www.cgnet.com.np/frontend/img/expire/paymentViaEsewa.mp4">
-          </video>
+            <source src="{{ url_for('static', filename='img/Esewa.mp4') }}" type="video/mp4">
+        </video>
+      
           <p>Download from:</p>
           <div class="app">
             <a href="https://apps.apple.com/in/app/cg-net/id1596428635">
-              <img src="https://cgnet.com.np/frontend/img/appstore.png" alt="App Store" style="background-color: black;"> </a>
+              <img src="{{ url_for('static', filename='img/appstore.png') }}" alt="App Store" style="background-color: black;"> </a>
             <a href="https://play.google.com/store/apps/details?id=np.com.cgnet.customerapp">
-              <img src="https://cgnet.com.np/frontend/img/googleplay.png" alt="Google Play" style="background-color: black;"> </a>
+              <img src="{{ url_for('static', filename='img/playstore.png') }}" alt="Google Play" style="background-color: black;"> </a>
           </div>
         </section>
       </section>
